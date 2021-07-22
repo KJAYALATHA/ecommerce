@@ -101,6 +101,7 @@ function CartScreen({ match, location, history }) {
 
   const checkoutHandler = () =>{
       history.push('/login?redirect=shipping')
+      console.log('shipping in cartScreen');
   }
 
   return (

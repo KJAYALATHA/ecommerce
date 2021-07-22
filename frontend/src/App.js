@@ -7,8 +7,17 @@ import  ProductScreen  from "./screens/ProductScreen";
 import  ProfileScreen  from "./screens/ProfileScreen";
 import  CartScreen  from "./screens/CartScreen";
 import  LoginScreen  from "./screens/LoginScreen";
+import  PaymentScreen  from "./screens/PaymentScreen";
+import  PlaceOrderScreen  from "./screens/PlaceOrderScreen";
+import  OrderScreen  from "./screens/OrderScreen";
+import  UserListScreen  from "./screens/UserListScreen";
+import  ShippingScreen  from "./screens/ShippingScreen";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import RegisterScreen from "./screens/RegisterScreen.js";
+import UserEditScreen from "./screens/UserEditScreen";
+import ProductListScreen from "./screens/ProductListScreen";
+import ProductEditScreen from "./screens/ProductEditScreen";
+import OrderListScreen from "./screens/OrderListScreen";
 
 function App() { 
   return (
@@ -21,8 +30,17 @@ function App() {
          <Route path='/login' component={LoginScreen} exact/>
          <Route path='/register' component={RegisterScreen} exact/>
          <Route path='/profile' component={ProfileScreen} exact/>
+         <Route path='/shipping' component={ShippingScreen} exact/>
+         <Route path='/payment' component={PaymentScreen} exact/>
+         <Route path='/placeorder' component={PlaceOrderScreen} exact/>
+         <Route path='/order/:id' component={OrderScreen} exact/>
+         <Route path='/admin/userlist' component={UserListScreen} exact/>
          <Route path='/products/:id' component={ProductScreen} exact/>
          <Route path='/cart/:id?' component={CartScreen} exact/>
+         <Route path='/admin/user/:id/edit' component={UserEditScreen} exact/>
+         <Route path='/admin/product/:id/edit' component={ProductEditScreen} exact/>
+         <Route path='/admin/productlist' component={ProductListScreen} exact/>
+         <Route path='/admin/orderlist' component={OrderListScreen} exact/>
         </Container>
       </main>
 

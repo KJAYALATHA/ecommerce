@@ -11,7 +11,8 @@ function LoginScreen({location,history}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch()
-  const redirect = location.search ? location.serach.split('=')[1]:'/'
+ const redirect = location.search ? location.search.split('=')[1] : '/'
+  //const redirect = location.search ? location.search.split('=')[1] : '/'
   console.log(redirect,"sowthri");
 
   const userLogin = useSelector(state => state.userLogin) //this userLogin is comes from store.js
@@ -33,7 +34,7 @@ function LoginScreen({location,history}) {
   return (
     <FormContainer>
       <h1>Sign In</h1>
-      {error && <Message variant = 'danger'></Message>}
+      {error && <Message variant = 'danger'>{error}</Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email">
